@@ -18,9 +18,10 @@ alias lara="sites && cd laravel/"
 # Laravel
 alias a="php artisan"
 alias ams="php artisan migrate:fresh --seed"
+alias tests='php artisan test'
 
 # PHP
-alias php73="/usr/local/Cellar/php@7.3/7.3.13/bin/php"
+alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
 alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
@@ -46,6 +47,7 @@ alias docker-composer="docker-compose"
 
 # Git
 alias commit="git add . && git commit -m"
+alias push="commit "
 alias gcommit="git add . && git commit"
 alias amend="git commit --amend --no-edit"
 alias amendall="git add . && amend"
@@ -57,3 +59,6 @@ alias gd="git diff"
 alias resolve="git add . && git commit --no-edit"
 alias gl="git log --oneline --decorate --color"
 alias nuke="git clean -df && git reset --hard"
+push() {
+    git add . && git commit -am "$@" && git push origin HEAD
+}
