@@ -61,6 +61,3 @@ alias resolve="git add . && git commit --no-edit"
 alias gl="git log --oneline --decorate --color"
 alias nuke="git clean -df && git reset --hard"
 alias gph="git push origin HEAD"
-push() {
-    git add . && git commit -am "$@" && git push origin HEAD
-}

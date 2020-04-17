@@ -1,3 +1,6 @@
+# Security 
+ZSH_DISABLE_COMPFIX=true
+
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
 
@@ -9,6 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Enable completions
 autoload -Uz compinit && compinit
+
 
 # Minimal - Theme Settings
 export MNML_INSERT_CHAR="$"
@@ -109,3 +113,4 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
