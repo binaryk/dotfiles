@@ -1,8 +1,9 @@
-# Security 
+# Security
 ZSH_DISABLE_COMPFIX=true
 
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
+export BREW_POWERLEVER="/usr/local/opt/"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -13,17 +14,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Enable completions
 autoload -Uz compinit && compinit
 
-
-# Minimal - Theme Settings
-export MNML_INSERT_CHAR="$"
-export MNML_PROMPT=(mnml_git mnml_keymap)
-export MNML_RPROMPT=('mnml_cwd 20')
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="minimal"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,7 +71,7 @@ ZSH_THEME="minimal"
 HIST_STAMPS="dd/mm/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$DOTFILES
+ZSH_CUSTOM=$BREW_POWERLEVER
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -113,4 +108,8 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Load powerlevel9k custom configuration
+#source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+source $DOTFILES/powerlevel9k/powerlevel9k.zsh-theme
 

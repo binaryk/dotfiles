@@ -4,6 +4,7 @@ tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'sambadevi/powerlevel9k'
 
 # Binaries
 brew 'awscli'
@@ -42,6 +43,9 @@ brew 'nginx'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+
+# CLI
+brew 'powerlevel9k'
 
 # Apps
 cask '1password'
