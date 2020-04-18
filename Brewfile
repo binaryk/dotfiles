@@ -5,6 +5,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'sambadevi/powerlevel9k'
+tap 'cjbassi/gotop'
 
 # Binaries
 brew 'awscli'
@@ -45,9 +46,14 @@ brew 'redis'
 brew 'yarn'
 
 # CLI
-brew iterm2
+brew 'lsd'
+brew 'iterm2'
 brew 'powerlevel9k'
+brew 'gotop'
+brew 'neofetch'
+brew 'fontforge'
 brew 'https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/zsh-autosuggestions.rb'
+brew 'https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/zsh-syntax-highlighting.rb'
 
 # Apps
 cask '1password'

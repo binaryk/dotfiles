@@ -62,3 +62,17 @@ alias wip="commit wip"
 alias gcm="git checkout master && git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gcdd="git checkout develop && git pull origin develop"
+
+# LSD
+alias ls="lsd"
+alias l="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lt="ls --tree"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+
+# Files
+alias about="neofetch"

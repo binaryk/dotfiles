@@ -1,7 +1,15 @@
 push() {
-  git add . && git commit -am "$@" && git push origin HEAD
+    git status .
+    git add .
+    git commit -m "$1"
+    git push origin HEAD
 }
 
 search() {
-  mdfind -name $@
+    if [ $# = 1 ];
+    then
+        command find . -iname "*$@*"
+    else
+        command find "$@"
+    fi
 }
