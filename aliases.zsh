@@ -8,7 +8,7 @@ alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
 # Directories
-alias dotfiles="cd $DOTFILES"
+alias dots="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
@@ -62,6 +62,7 @@ alias wip="commit wip"
 alias gcm="git checkout master && git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gcdd="git checkout develop && git pull origin develop"
+alias glog="git --no-pager log --all --color=always --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | less -r -X +/[^/]HEAD"
 
 # LSD
 alias ls="lsd"

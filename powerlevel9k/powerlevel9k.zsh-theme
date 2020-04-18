@@ -11,12 +11,10 @@ ENABLE_CORRECTION="true"
 plugins=(git)
 
 # https://github.com/bhilburn/powerlevel9k#prompt-customization
-
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-
 POWERLEVEL9K_MODE=nerdfont-complete
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K=truncate_beginning
