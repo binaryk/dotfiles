@@ -45,7 +45,9 @@ brew 'redis'
 brew 'yarn'
 
 # CLI
+brew iterm2
 brew 'powerlevel9k'
+brew 'https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/zsh-autosuggestions.rb'
 
 # Apps
 cask '1password'

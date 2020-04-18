@@ -1,14 +1,11 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reloadcli="source $HOME/.zshrc"
 alias reload="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
-alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -ahlF --color --group-directories-first"
-weather() { curl -4 wttr.in/${1:-antwerp} }
+alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
-alias zbundle="antibody bundle < $DOTFILES/zsh_plugins.txt > $DOTFILES/zsh_plugins.sh"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
@@ -47,17 +44,21 @@ alias docker-composer="docker-compose"
 #dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Git
-alias commit="git add . && git commit -m"
-alias push="commit "
-alias gcommit="git add . && git commit"
-alias amend="git commit --amend --no-edit"
-alias amendall="git add . && amend"
-alias wip="commit wip"
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
-alias gd="git diff"
-alias resolve="git add . && git commit --no-edit"
 alias gl="git log --oneline --decorate --color"
+alias amend="git add . && git commit --amend --no-edit"
+alias commit="git add . && git commit -m"
+alias diff="git diff"
+alias force="git push --force"
 alias nuke="git clean -df && git reset --hard"
-alias gph="git push origin HEAD"
+alias pop="git stash pop"
+alias pull="git pull"
+alias resolve="git add . && git commit --no-edit"
+alias stash="git stash -u"
+alias unstage="git restore --staged ."
+alias wip="commit wip"
+alias gcm="git checkout master && git pull origin master"
+alias gcd="git checkout development && git pull origin development"
+alias gcdd="git checkout develop && git pull origin develop"

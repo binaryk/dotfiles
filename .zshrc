@@ -3,7 +3,7 @@ ZSH_DISABLE_COMPFIX=true
 
 # Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
-export BREW_POWERLEVER="/usr/local/opt/"
+export BREW_LOCATION="/usr/local"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -70,15 +70,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # see 'man strftime' for details.
 HIST_STAMPS="dd/mm/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$BREW_POWERLEVER
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# Would you like to use another custom folder than $ZSH/custom? Brew will install here the powerlevel9k theme
+ZSH_CUSTOM=$BREW_LOCATION/opt
 
 source $ZSH/oh-my-zsh.sh
 
