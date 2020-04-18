@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54efdf51-1e02-45c3-affb-a83b150af88b" name="Default Changelist" comment="wip">
-      <change beforePath="$PROJECT_DIR$/.zshrc" beforeDir="false" afterPath="$PROJECT_DIR$/.zshrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minimal.zsh-theme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/powerlevel9k/powerlevel9k.zsh-theme" beforeDir="false" afterPath="$PROJECT_DIR$/powerlevel9k/powerlevel9k.zsh-theme" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587145162116</updated>
       <workItem from="1587145164359" duration="5550000" />
+      <workItem from="1587210179572" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1587149024309</created>
