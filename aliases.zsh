@@ -12,6 +12,8 @@ alias dots="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
+alias work="sites && cd work/"
+alias binar="sites && cd binarcode/"
 
 # Laravel
 alias a="php artisan"

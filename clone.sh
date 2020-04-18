@@ -3,9 +3,18 @@
 echo "Cloning repositories..."
 
 SITES=$HOME/Sites
+BINARCODE=$HOME/Sites/binarcode
 LARAVEL=$SITES/laravel
 
-# Personal
+# BinarCode
+git clone git@github.com:BinarCode/binarcode-admin.git $BINARCODE/binarcode-admin
+git clone git@github.com:BinarCode/nova.git $BINARCODE/nova
+git clone git@github.com:BinarCode/laravel-restify.git $BINARCODE/laravel-restify
+git clone git@github.com:BinarCode/laravel-stateless-session.git $BINARCODE/laravel-stateless-session
+git clone git@github.com:BinarCode/elements.git $BINARCODE/elements
+git clone git@github.com:BinarCode/laravel-mailator.git $BINARCODE/mailator
+git clone git@github.com:BinarCode/tse-cli.git $BINARCODE/tse-cli
+git clone git@github.com:BinarCode/tse.git $BINARCODE/tse
 
 # Laravel
 git clone git@github.com:laravel/browser-kit-testing.git $LARAVEL/browser-kit-testing
