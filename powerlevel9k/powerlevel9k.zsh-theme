@@ -52,18 +52,6 @@ ZLE_RPROMPT_INDENT=0
 # One of the first things I quickly noticed using Zsh is that many of the keys and shortcuts that I was used to, coming from bash, wouldn't work at all or resulted in unexpected behaviors.
 # See: https://drasite.com/blog/Pimp%20my%20terminal
 
-bindkey '^[[2~' overwrite-mode
-bindkey '^[[3~' delete-char
-bindkey '^[[H' beginning-of-line
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[F' end-of-line
-bindkey '^[[4~' end-of-line
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
-bindkey '^[[3;5~' kill-word
-bindkey '^[[5~' beginning-of-buffer-or-history
-bindkey '^[[6~' end-of-buffer-or-history
-
 unsetopt NO_BEEP
 unsetopt NO_MATCH
 unsetopt AUTO_CD
@@ -85,3 +73,4 @@ unsetopt MAGIC_EQUAL_SUBST
 
 source $DOTFILES/aliases.zsh
 source $DOTFILES/functions.zsh
+
