@@ -6,8 +6,10 @@ alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-dire
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
+alias aliases="vi $DOTFILES/aliases.zsh"
 
 # Directories
+alias home="cd $HOME"
 alias dots="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
@@ -19,7 +21,8 @@ alias school="sites && cd school/"
 # Laravel
 alias a="php artisan"
 alias ams="php artisan migrate:fresh --seed"
-alias tests='php artisan test'
+alias tests="php artisan test"
+alias migrate="php artisan migrate"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
