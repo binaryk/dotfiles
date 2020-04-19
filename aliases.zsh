@@ -63,6 +63,7 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias gcm="git checkout master && git pull origin master"
 alias gcd="git checkout development && git pull origin development"
+alias gph="git push origin HEAD"
 alias gcdd="git checkout develop && git pull origin develop"
 alias glog="git --no-pager log --all --color=always --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | less -r -X +/[^/]HEAD"
 
