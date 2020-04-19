@@ -73,4 +73,5 @@ unsetopt MAGIC_EQUAL_SUBST
 
 source $DOTFILES/aliases.zsh
 source $DOTFILES/functions.zsh
+source $DOTFILES/path.zsh
 

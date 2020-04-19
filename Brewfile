@@ -44,6 +44,7 @@ brew 'nginx'
 brew 'node'
 brew 'redis'
 brew 'yarn'
+brew 'vim'
 
 # CLI
 brew 'lsd'
