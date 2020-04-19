@@ -14,6 +14,7 @@ alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
 alias work="sites && cd work/"
 alias binar="sites && cd binarcode/"
+alias school="sites && cd school/"
 
 # Laravel
 alias a="php artisan"
