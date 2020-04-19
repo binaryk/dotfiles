@@ -81,3 +81,4 @@ alias diff='diff --color=auto'
 
 # Files
 alias about="neofetch"
+alias vi="vim"
