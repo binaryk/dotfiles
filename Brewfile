@@ -86,6 +86,7 @@ cask 'virtualbox' # Might need to allow access in Security settings
 cask 'virtualbox-extension-pack'
 cask 'vlc'
 cask 'whatsapp'
+cask 'zeplin'
 
 # Quicklook
 cask 'qlcolorcode'
