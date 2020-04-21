@@ -106,3 +106,6 @@ export LANG=en_US.UTF-8
 #source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 source $DOTFILES/powerlevel9k/powerlevel9k.zsh-theme
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+

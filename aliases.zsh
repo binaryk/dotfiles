@@ -5,7 +5,6 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
-alias c="clear"
 alias aliases="vi $DOTFILES/aliases.zsh"
 
 # Directories
@@ -28,10 +27,11 @@ alias migrate="php artisan migrate"
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
 alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias watch="phpunit-watcher watch --filter="
+aliis cr="composer require"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
-alias watch="npm run watch"
 
 # Vagrant
 alias v="vagrant global-status"
@@ -65,6 +65,7 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gph="git push origin HEAD"
@@ -85,3 +86,5 @@ alias diff='diff --color=auto'
 # Files
 alias about="neofetch"
 alias vi="vim"
+
+source $DOTFILES/aliases.private.zsh
