@@ -87,5 +87,6 @@ alias diff='diff --color=auto'
 # Files
 alias about="neofetch"
 alias vi="vim"
+alias start-redis="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
 
 source $DOTFILES/aliases.private.zsh
