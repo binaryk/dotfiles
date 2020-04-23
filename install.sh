@@ -20,6 +20,10 @@ brew bundle
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
+# Launch Redis on computer starts.
+ln -sfv /usr/local/opt/redis/*.plist $HOME/Library/LaunchAgents
+
+
 # Install PHP extensions with PECL
 pecl install memcached imagick
 

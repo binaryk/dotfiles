@@ -29,6 +29,7 @@ alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 alias watch="phpunit-watcher watch --filter="
 alias cr="composer require"
+alias cup="composer update"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
