@@ -23,6 +23,7 @@ alias a="php artisan"
 alias ams="php artisan migrate:fresh --seed"
 alias tests="php artisan test"
 alias migrate="php artisan migrate"
+alias rollback="php artisan migrate:rollback"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
