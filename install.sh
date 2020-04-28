@@ -28,7 +28,7 @@ ln -sfv /usr/local/opt/redis/*.plist $HOME/Library/LaunchAgents
 pecl install memcached imagick
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet spatie/phpunit-watcher
+/usr/local/bin/composer global require laravel/installer laravel/spark-installer laravel/valet spatie/phpunit-watcher laravel/envoy
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
