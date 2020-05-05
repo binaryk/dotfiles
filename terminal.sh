@@ -14,5 +14,3 @@ bash -c "$(curl -sLo- https://git.io/JvvDs)"
 # Fixing the issue with paste into terminal
 printf '\e[?2004l'
 
-# Deno
-curl -fsSL https://deno.land/x/install/install.sh | sh
