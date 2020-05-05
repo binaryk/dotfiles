@@ -109,3 +109,4 @@ cask 'font-source-serif-pro'
 # Mac App Store
 mas '1Password', id: 1333542190
 mas 'spark', id: 1176895641
+mas 'TweetDeck', id: 485812721
