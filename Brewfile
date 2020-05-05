@@ -88,7 +88,6 @@ cask 'virtualbox-extension-pack'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zeplin'
-cask 'youtube-dl'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -106,6 +105,9 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
+
+# Others
+brew 'youtube-dl' # Download youtube video from CLI
 
 # Mac App Store
 mas '1Password', id: 1333542190
