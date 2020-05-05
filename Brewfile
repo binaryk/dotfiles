@@ -88,6 +88,7 @@ cask 'virtualbox-extension-pack'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zeplin'
+cask 'youtube-dl'
 
 # Quicklook
 cask 'qlcolorcode'
