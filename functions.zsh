@@ -5,6 +5,11 @@ push() {
     git push origin HEAD
 }
 
+gcbr() {
+    git checkout "$1"
+    git pull origin "$1"
+}
+
 search() {
     if [ $# = 1 ];
     then
