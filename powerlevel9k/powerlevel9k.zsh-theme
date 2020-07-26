@@ -1,6 +1,7 @@
 # Load plugin from the brew path
 source $BREW_LOCATION/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $BREW_LOCATION/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_CUSTOM/plugins/git-open/git-open.plugin.zsh
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -8,7 +9,7 @@ source $BREW_LOCATION/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-plugins=(git)
+plugins=(git git-open)
 
 # https://github.com/bhilburn/powerlevel9k#prompt-customization
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1

@@ -41,3 +41,6 @@ git clone git@github.com:laravel/socialite.git $LARAVEL/socialite
 git clone git@github.com:laravel/telescope.git $LARAVEL/telescope
 git clone git@github.com:laravel/tinker.git $LARAVEL/tinker
 git clone git@github.com:laravel/ui.git $LARAVEL/ui
+
+# Tools
+git clone https://github.com/paulirish/git-open.git $ZSH_CUSTOM/plugins/git-open

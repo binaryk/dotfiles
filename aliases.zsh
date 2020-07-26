@@ -17,6 +17,7 @@ alias lara="sites && cd laravel/"
 alias work="sites && cd work/"
 alias binar="sites && cd binarcode/"
 alias school="sites && cd school/"
+alias h="sites && cd homestead/"
 
 # Laravel
 alias a="php artisan"
@@ -24,14 +25,17 @@ alias ams="php artisan migrate:fresh --seed"
 alias tests="php artisan test"
 alias migrate="php artisan migrate"
 alias rollback="php artisan migrate:rollback"
+alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log && tail -f ./storage/logs/laravel.log"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
 alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 alias watch="phpunit-watcher watch --filter="
+alias w="phpunit-watcher watch --filter="
 alias cr="composer require"
 alias cup="composer update"
+alias p='./vendor/bin/phpunit'
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
@@ -42,6 +46,7 @@ alias vup="vagrant up"
 alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
 alias vreload="vagrant reload"
+alias vpreload="vagrant reload --provision"
 alias vrebuild="vagrant destroy --force && vagrant up"
 
 # Docker
@@ -71,6 +76,8 @@ alias wip="commit wip"
 alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
 alias gcs="git checkout staging && git pull origin staging"
+alias gpls="git pull origin staging"
+alias gplm="git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gph="git push origin HEAD"
 alias gcdd="git checkout develop && git pull origin develop"
@@ -92,4 +99,11 @@ alias about="neofetch"
 alias vi="vim"
 alias start-redis="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
 
+# Composer
+alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
+
 source $DOTFILES/aliases.private.zsh
+
+# Port
+alias killme="lsof -n -i4TCP:"
+
