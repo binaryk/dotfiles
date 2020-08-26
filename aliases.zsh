@@ -58,6 +58,7 @@ alias docker-composer="docker-compose"
 #dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 
 # Git
+alias nah='git reset --hard HEAD; git clean -df'
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
