@@ -83,7 +83,10 @@ alias gpls="git pull origin staging"
 alias gplm="git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gph="git push origin HEAD"
+alias gplh="git pull origin HEAD"
 alias gcdd="git checkout develop && git pull origin develop"
+alias gfa="git fetch --all"
+alias gtrigger="git commit --allow-empty -m 'wakey wakey GitHub Actions'"
 alias glog="git --no-pager log --all --color=always --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | less -r -X +/[^/]HEAD"
 
 # LSD

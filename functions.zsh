@@ -1,4 +1,7 @@
 push() {
+	$branch = git rev-parse --abbrev-ref HEAD
+
+	echo $?;
     git status .
     git add .
     git commit -m "$1"
@@ -19,3 +22,6 @@ search() {
     fi
 }
 
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
