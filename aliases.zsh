@@ -26,6 +26,7 @@ alias tests="php artisan test"
 alias migrate="php artisan migrate"
 alias rollback="php artisan migrate:rollback"
 alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log && tail -f ./storage/logs/laravel.log"
+alias sail='./vendor/bin/sail'
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
@@ -76,6 +77,7 @@ alias unstage="git restore --staged ."
 alias wip="commit wip"
 alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
+alias gc4x="git checkout 4.x && git pull origin 4.x" # Restify
 alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
 alias gcs="git checkout staging && git pull origin staging"
