@@ -25,6 +25,7 @@ alias ams="php artisan migrate:fresh --seed"
 alias tests="php artisan test"
 alias migrate="php artisan migrate"
 alias rollback="php artisan migrate:rollback"
+alias r_m="rollback && migrate"
 alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log && tail -f ./storage/logs/laravel.log"
 alias sail='./vendor/bin/sail'
 
