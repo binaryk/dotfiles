@@ -41,6 +41,8 @@ alias p='./vendor/bin/phpunit'
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias m="mocha -r esm --watch"
+alias mm="mocha -r esm --watch -g "
 
 # Vagrant
 alias v="vagrant global-status"
@@ -76,6 +78,7 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+alias pwip="push wip"
 alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
 alias gc4x="git checkout 4.x && git pull origin 4.x" # Restify
@@ -115,4 +118,6 @@ source $DOTFILES/aliases.private.zsh
 
 # Port
 alias killme="lsof -n -i4TCP:"
+alias nstop="sudo services stop nginx"
+alias nstart="sudo services start nginx"
 
