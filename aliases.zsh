@@ -118,6 +118,6 @@ source $DOTFILES/aliases.private.zsh
 
 # Port
 alias killme="lsof -n -i4TCP:"
-alias nstop="sudo services stop nginx"
-alias nstart="sudo services start nginx"
+alias nstop="sudo brew services stop nginx"
+alias nstart="sudo brew services start nginx"
 
