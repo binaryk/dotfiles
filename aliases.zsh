@@ -124,4 +124,4 @@ alias nstop="sudo brew services stop nginx"
 alias nstart="sudo brew services start nginx"
 alias astop="sudo apachectl stop"
 alias astart="sudo apachectl start"
-
+alias cleardns="sudo killall -HUP mDNSResponder"
