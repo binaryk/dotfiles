@@ -38,6 +38,8 @@ alias w="phpunit-watcher watch --filter="
 alias cr="composer require"
 alias cup="composer update"
 alias p='./vendor/bin/phpunit'
+alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0"
+alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
