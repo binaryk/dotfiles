@@ -38,6 +38,7 @@ alias w="phpunit-watcher watch --filter="
 alias cr="composer require"
 alias cup="composer update"
 alias p='./vendor/bin/phpunit'
+alias pp="php artisan test --parallel"
 alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0"
 alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4"
 
@@ -84,6 +85,7 @@ alias pwip="push wip"
 alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
 alias gc4x="git checkout 4.x && git pull origin 4.x" # Restify
+alias gc5x="git checkout 5.x && git pull origin 5.x" # Restify
 alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
 alias gcs="git checkout staging && git pull origin staging"
@@ -124,6 +126,7 @@ alias killpid="sudo kill -9 $0"
 alias who="sudo lsof -i :80"
 alias nstop="sudo brew services stop nginx"
 alias nstart="sudo brew services start nginx"
+alias nrestart="sudo nginx -s reload && sudo apachectl restart && valet restart"
 alias astop="sudo apachectl stop"
 alias astart="sudo apachectl start"
 alias cleardns="sudo killall -HUP mDNSResponder"
