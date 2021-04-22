@@ -27,7 +27,7 @@ alias migrate="php artisan migrate"
 alias rollback="php artisan migrate:rollback"
 alias r_m="rollback && migrate"
 alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log && tail -f ./storage/logs/laravel.log"
-alias sail='./vendor/bin/sail'
+alias sail='bash vendor/bin/sail'
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
@@ -76,7 +76,7 @@ alias diff="git diff"
 alias force="git push --force"
 alias nuke="git clean -df && git reset --hard"
 alias pop="git stash pop"
-alias pull="git pull"
+alias pull="git pull origin $(git branch --show-current)"
 alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
