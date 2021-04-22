@@ -8,6 +8,18 @@ push() {
     git push origin HEAD
 }
 
+
+function sync() {
+ if [ -d .git ]; then
+  branch=$(git branch --show-current)
+ else
+  branch=$1
+ fi;
+
+ echo "Sync with branch $branch"
+ git pull origin "$branch"
+}
+
 gcbr() {
     git checkout "$1"
     git pull origin "$1"
@@ -22,6 +34,7 @@ search() {
         command find "$@"
     fi
 }
+
 
 function homestead() {
     ( cd ~/Homestead && vagrant $* )
