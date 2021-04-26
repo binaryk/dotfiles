@@ -41,6 +41,7 @@ alias p='./vendor/bin/phpunit'
 alias pp="php artisan test --parallel"
 alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0"
 alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4"
+alias brew:up='brew update && brew upgrade && brew cleanup'
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
