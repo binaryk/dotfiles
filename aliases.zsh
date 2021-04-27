@@ -39,8 +39,8 @@ alias cr="composer require"
 alias cup="composer update"
 alias p='./vendor/bin/phpunit'
 alias pp="php artisan test --parallel"
-alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0"
-alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4"
+alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0 --force"
+alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4 --force"
 alias brew:up='brew update && brew upgrade && brew cleanup'
 
 # JS
@@ -90,6 +90,7 @@ alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
 alias gcs="git checkout staging && git pull origin staging"
 alias gpls="git pull origin staging"
+alias gps="git pull origin staging"
 alias gplm="git pull origin master"
 alias gcd="git checkout development && git pull origin development"
 alias gph="git push origin HEAD"
