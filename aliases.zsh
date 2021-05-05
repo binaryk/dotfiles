@@ -33,7 +33,7 @@ alias sail='bash vendor/bin/sail'
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
 alias php72="/usr/local/Cellar/php@7.2/7.2.26/bin/php"
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
-alias watch="phpunit-watcher watch --filter="
+alias watch="phpunit-watcher"
 alias w="phpunit-watcher watch --filter="
 alias cr="composer require"
 alias cup="composer update"

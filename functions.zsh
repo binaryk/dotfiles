@@ -1,7 +1,5 @@
 push() {
-	$branch = git rev-parse --abbrev-ref HEAD
-
-	echo $?;
+    echo $?;
     git status .
     git add .
     git commit -m "$1"
