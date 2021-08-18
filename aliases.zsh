@@ -29,6 +29,8 @@ alias rollback="php artisan migrate:rollback"
 alias r_m="rollback && migrate"
 alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log && tail -f ./storage/logs/laravel.log"
 alias sail='bash vendor/bin/sail'
+alias larastan="vendor/bin/phpstan analyse"
+alias d="php artisan dusk"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
