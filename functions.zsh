@@ -24,16 +24,41 @@ gcbr() {
 }
 
 
-search() {
-    if [ $# = 1 ];
-    then
-        command find . -iname "*$@*"
-    else
-        command find "$@"
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -e "drop database $2"
+    elif [ "$1" = "list" ]; then
+        mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
     fi
 }
 
+archive () {
+   zip -r "$1".zip -i "$1" ;
+}
 
-function homestead() {
-    ( cd ~/Homestead && vagrant $* )
+# All the dig info
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer
+}
+
+
+# Scrape a single webpage with all assets
+function scrapeUrl() {
+    wget --adjust-extension --convert-links --page-requisites --span-hosts --no-host-directories "$1"
+}
+
+function scheduler () {
+    while :; do
+        php artisan schedule:run
+	echo "Sleeping 60 seconds..."
+        sleep 60
+    done
 }

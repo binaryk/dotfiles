@@ -18,6 +18,7 @@ alias work="sites && cd work/"
 alias binar="sites && cd binarcode/"
 alias school="sites && cd school/"
 alias h="sites && cd homestead/"
+alias revamp="work && cd revamp-givelegacy-dashboard"
 
 # Laravel
 alias a="php artisan"
@@ -114,7 +115,10 @@ alias diff='diff --color=auto'
 # Files
 alias about="neofetch"
 alias vi="vim"
-alias start-redis="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist"
+alias search="grep -rnw . -e $1"
+
+# Redis
+alias start-redis="brew services start redis"
 
 # Composer
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
