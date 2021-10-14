@@ -33,11 +33,19 @@ function db {
         mysql -uroot -e "drop database $2; create database $2"
     elif [ "$1" = "create" ]; then
         mysql -uroot -e "create database $2"
+    elif [ "$1" = "import" ]; then
+        mysql -uroot $2 < "$3"
+    elif [ "$1" = "reimport" ]; then
+        db refresh $2 && mysql -uroot $2 < "$3"
     elif [ "$1" = "drop" ]; then
         mysql -uroot -e "drop database $2"
     elif [ "$1" = "list" ]; then
         mysql -uroot -e "show databases" | perl -p -e's/\|| *//g'
     fi
+}
+
+function ws {
+ ./vendor/bin/pest --filter="\"$1\"" --watch
 }
 
 archive () {

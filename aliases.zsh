@@ -42,7 +42,7 @@ alias cr="composer require"
 alias cup="composer update"
 alias p='./vendor/bin/phpunit'
 alias pp="php artisan test --parallel"
-alias ws="./vendor/bin/pest --filter="
+
 alias pest="./vendor/bin/pest"
 alias pw="./vendor/bin/pest --watch"
 alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0 --force"
