@@ -45,6 +45,7 @@ alias pp="php artisan test --parallel"
 
 alias pest="./vendor/bin/pest"
 alias pw="./vendor/bin/pest --watch"
+alias usephp81="brew unlink php && brew link --overwrite php@8.1 && valet use php@8.1 --force"
 alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0 --force"
 alias usephp7="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4 --force"
 alias brew:up='brew update && brew upgrade && brew cleanup'
