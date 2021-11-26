@@ -94,10 +94,12 @@ alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
 alias gc4x="git checkout 4.x && git pull origin 4.x" # Restify
 alias gc5x="git checkout 5.x && git pull origin 5.x" # Restify
+alias gc6x="git checkout 6.x && git pull origin 6.x" # Restify
 alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
 alias gcs="git checkout staging && git pull origin staging"
 alias gpls="git pull origin staging"
+alias gpld="git pull origin development"
 alias gps="git pull origin staging"
 alias gplm="git pull origin master"
 alias gcd="git checkout development && git pull origin development"
@@ -105,6 +107,10 @@ alias gph="git push origin HEAD"
 alias gplh="git pull origin HEAD"
 alias gcdd="git checkout develop && git pull origin develop"
 alias gfa="git fetch --all"
+alias prd="gh pr create -B development"
+alias prs="gh pr create -B staging"
+alias prm="gh pr create -B master"
+alias prmm="gh pr create -B main"
 alias gtrigger="git commit --allow-empty -m 'wakey wakey GitHub Actions'"
 alias glog="git --no-pager log --all --color=always --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | less -r -X +/[^/]HEAD"
 

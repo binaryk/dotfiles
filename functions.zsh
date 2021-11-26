@@ -2,7 +2,7 @@ push() {
     echo $?;
     git status .
     git add .
-    git commit -m "$1"
+    git commit -m "fix: $1"
     git push origin HEAD
 }
 
