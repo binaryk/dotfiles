@@ -6,6 +6,21 @@ push() {
     git push origin HEAD
 }
 
+fix() {
+    echo $?;
+    git status .
+    git add .
+    git commit -m "fix: $1"
+    git push origin HEAD
+}
+
+feat() {
+    echo $?;
+    git status .
+    git add .
+    git commit -m "feat: $1"
+    git push origin HEAD
+}
 
 function sync() {
  if [ -d .git ]; then
