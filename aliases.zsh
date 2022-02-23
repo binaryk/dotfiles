@@ -31,6 +31,7 @@ alias log="rm -rf ./storage/logs/laravel.log && touch ./storage/logs/laravel.log
 alias sail='bash vendor/bin/sail'
 alias larastan="vendor/bin/phpstan analyse"
 alias d="php artisan dusk"
+alias fresh="composer fresh"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
@@ -45,7 +46,7 @@ alias pp="php artisan test --parallel"
 
 alias pest="./vendor/bin/pest"
 alias pw="./vendor/bin/pest --watch"
-alias usephp81="brew unlink php && brew link --overwrite php@8.1 && valet use php@8.1 --force"
+alias usephp81="brew unlink php && brew link --overwrite php@8.1 && valet use php@8.1 --force && valet restart"
 alias usephp8="brew unlink php && brew link --overwrite php@8.0 && valet use php@8.0 --force"
 alias usephp74="brew unlink php && brew link --overwrite php@7.4 && valet use php@7.4 --force"
 alias usephp73="brew unlink php && brew link --overwrite php@7.3 && valet use php@7.3 --force"
@@ -148,3 +149,7 @@ alias nrestart="sudo nginx -s reload && sudo apachectl restart && valet restart"
 alias astop="sudo apachectl stop"
 alias astart="sudo apachectl start"
 alias cleardns="sudo killall -HUP mDNSResponder"
+
+
+# ARM
+alias mbrew="arch -x86_64 brew"
