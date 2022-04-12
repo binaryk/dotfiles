@@ -1,12 +1,14 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reload="source $HOME/.zshrc && source ~/.dotfiles/.zshrc"
+alias reload="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias dotfiles="cd $DOTFILES"
 alias aliases="vi $DOTFILES/aliases.zsh"
 alias paths="vi $DOTFILES/path.zsh"
+alias vars="vi $DOTFILES/variables.zsh"
 alias c="clear"
 
 # Directories
@@ -140,8 +142,6 @@ alias start-redis="brew services start redis"
 # Composer
 alias composer="php -d memory_limit=-1 /usr/local/bin/composer"
 
-source $DOTFILES/aliases.private.zsh
-
 # Port
 alias killme="lsof -n -i4TCP:"
 alias killpid="sudo kill -9 $0"
@@ -159,3 +159,4 @@ alias mbrew="arch -x86_64 brew"
 
 # Python
 alias pip="pip3"
+

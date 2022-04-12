@@ -1,9 +1,11 @@
 # Security
 ZSH_DISABLE_COMPFIX=true
 
-# Path to your dotfiles.
+# Variables
 export DOTFILES=$HOME/.dotfiles
-export BREW_LOCATION="/usr/local"
+
+source $DOTFILES/variables.zsh
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -108,4 +110,15 @@ source $DOTFILES/powerlevel9k/powerlevel9k.zsh-theme
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
+# Imports
+source $DOTFILES/aliases.zsh
+source $DOTFILES/functions.zsh
+source $DOTFILES/path.zsh
 
+if [ -f "$DOTFILES/aliases.private.zsh" ]; then
+        source $DOTFILES/aliases.private.zsh
+fi
+
+if [ -f "$FRAMEWORKS/Python.framework/Versions/3.8/bin/virtualenvwrapper.sh" ]; then
+        source $FRAMEWORKS/Python.framework/Versions/3.8/bin/virtualenvwrapper.sh
+fi
