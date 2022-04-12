@@ -1,6 +1,6 @@
 # Shortcuts
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias reload="source $HOME/.zshrc"
+alias reload="source $HOME/.zshrc && source ~/.dotfiles/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
@@ -32,6 +32,8 @@ alias sail='bash vendor/bin/sail'
 alias larastan="vendor/bin/phpstan analyse"
 alias d="php artisan dusk"
 alias fresh="composer fresh"
+alias t="composer test"
+alias tt="php artisan test --parallel"
 
 # PHP
 alias php74="/usr/local/Cellar/php@7.4/7.4.13/bin/php"
@@ -153,3 +155,6 @@ alias cleardns="sudo killall -HUP mDNSResponder"
 
 # ARM
 alias mbrew="arch -x86_64 brew"
+
+# Python
+alias pip="pip3"
