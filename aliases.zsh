@@ -160,3 +160,6 @@ alias mbrew="arch -x86_64 brew"
 # Python
 alias pip="pip3"
 
+# Mongo
+alias mongo-start="brew services start mongodb-community"
+alias mongo-stop="brew services stop mongodb-community"

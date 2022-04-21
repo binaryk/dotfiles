@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # Security
 ZSH_DISABLE_COMPFIX=true
 
@@ -122,3 +124,6 @@ fi
 if [ -f "$FRAMEWORKS/Python.framework/Versions/3.8/bin/virtualenvwrapper.sh" ]; then
         source $FRAMEWORKS/Python.framework/Versions/3.8/bin/virtualenvwrapper.sh
 fi
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
