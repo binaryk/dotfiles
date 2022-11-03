@@ -101,6 +101,7 @@ alias gcm="git checkout master && git pull origin master"
 alias gc4x="git checkout 4.x && git pull origin 4.x" # Restify
 alias gc5x="git checkout 5.x && git pull origin 5.x" # Restify
 alias gc6x="git checkout 6.x && git pull origin 6.x" # Restify
+alias gc7x="git checkout 7.x && git pull origin 7.x" # Restify
 alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
 alias gcs="git checkout staging && git pull origin staging"
@@ -163,3 +164,11 @@ alias pip="pip3"
 # Mongo
 alias mongo-start="brew services start mongodb-community"
 alias mongo-stop="brew services stop mongodb-community"
+
+## Restify
+
+alias repo="a restify:repository $1" 
+
+## MySQL 
+alias mysql.start="cd /Users/eduardlupacescu/Sites/work/mysql-docker && docker-compose up -d"
+alias mysql.stop="cd /Users/eduardlupacescu/Sites/work/mysql-docker && docker-compose down"

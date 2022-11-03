@@ -47,7 +47,7 @@ function db {
     if [ "$1" = "refresh" ]; then
         mysql -uroot -e "drop database $2; create database $2"
     elif [ "$1" = "create" ]; then
-        mysql -uroot -e "create database $2"
+        mysql -psecret -h127.0.0.1 -uroot -e "create database $2"
     elif [ "$1" = "import" ]; then
         mysql -uroot $2 < "$3"
     elif [ "$1" = "reimport" ]; then
