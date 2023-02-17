@@ -19,6 +19,7 @@ fix() {
     new_num=$((last_num+1))  # Increase the last number by 1 using arithmetic expansion
     new_version=${version%.*}.$new_num  # Replace the last number in the version string
     echo $new_version
+    # https://cli.github.com/
     gh pr create -t $new_version -f
 }
 
@@ -36,6 +37,7 @@ feat() {
     new_version=$(echo $version | sed "s/\.[0-9]*\./.$new_num./")  # Replace the middle number in the version string
     new_version="${version%.*}.0"
     echo $new_version
+    # https://cli.github.com/
     gh pr create -t $new_version -f
 }
 
