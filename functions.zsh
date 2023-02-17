@@ -7,18 +7,24 @@ push() {
 }
 
 fix() {
-    echo $?;
-    git status .
-    git add .
-    git commit -m "fix: $1"
-    git push origin HEAD
     ## I want to automatically PR with a tag number greather than the previous one in the bug fix semver version
     git fetch --tags > /dev/null 2>&1 &
+
     version=$(git describe --tags --abbrev=0 || echo "0.0.1")
     last_num=${version##*.}  # Extract the last number using substring removal
     new_num=$((last_num+1))  # Increase the last number by 1 using arithmetic expansion
     new_version=${version%.*}.$new_num  # Replace the last number in the version string
     echo $new_version
+    if [ "$(git rev-parse --abbrev-ref HEAD)" = "$(git remote show origin | awk '/HEAD branch/ {print $NF}')" ]; then
+    git checkout -b $new_version
+	else
+    fi
+
+    git status .
+    git add .
+    git commit -m "fix: $1"
+    git push origin HEAD
+
     # https://cli.github.com/
     if [ -z "$1" ]; then
     	gh pr create -t $new_version -f
@@ -29,19 +35,24 @@ fix() {
 }
 
 feat() {
-    echo $?;
-    git status .
-    git add .
-    git commit -m "feat: $1"
-    git push origin HEAD
     ## I want to automatically PR with a tag number greather than the previous one in the minor semver version
     git fetch --tags > /dev/null 2>&1 &
     version=$(git describe --tags --abbrev=0 || echo "0.1.0") 
     middle_num=$(echo $version | cut -d. -f2)  # Extract the middle number using cut
     new_num=$((middle_num+1))  # Increase the middle number by 1 using arithmetic expansion
     new_version=$(echo $version | sed "s/\.[0-9]*\./.$new_num./")  # Replace the middle number in the version string
-    new_version="${version%.*}.0"
+    new_version="${new_version%.*}.0"
     echo $new_version
+    if [ "$(git rev-parse --abbrev-ref HEAD)" = "$(git remote show origin | awk '/HEAD branch/ {print $NF}')" ]; then
+    git checkout -b $new_version
+	else
+    fi
+
+    git status .
+    git add .
+    git commit -m "feat: $1"
+    git push origin HEAD
+
     # https://cli.github.com/
     if [ -z "$1" ]; then
     	gh pr create -t $new_version -f
