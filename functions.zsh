@@ -12,8 +12,13 @@ fix() {
     git add .
     git commit -m "fix: $1"
     git push origin HEAD
-    tag=$(git describe --tags --abbrev=0)
-    echo $tag
+    ## I want to automatically PR with a tag number greather than the previous one in the bug fix semver version
+    version=$(git describe --tags --abbrev=0 || echo "0.0.1")
+    last_num=${version##*.}  # Extract the last number using substring removal
+    new_num=$((last_num+1))  # Increase the last number by 1 using arithmetic expansion
+    new_version=${version%.*}.$new_num  # Replace the last number in the version string
+    echo $new_version
+    gh pr create -t $new_version -f
 }
 
 feat() {
@@ -22,6 +27,13 @@ feat() {
     git add .
     git commit -m "feat: $1"
     git push origin HEAD
+    ## I want to automatically PR with a tag number greather than the previous one in the minor semver version
+    version=$(git describe --tags --abbrev=0 || echo "0.1.0") 
+    middle_num=$(echo $version | cut -d. -f2)  # Extract the middle number using cut
+    new_num=$((middle_num+1))  # Increase the middle number by 1 using arithmetic expansion
+    new_version=$(echo $version | sed "s/\.[0-9]*\./.$new_num./")  # Replace the middle number in the version string
+    echo $new_version
+    gh pr create -t $new_version -f
 }
 
 function sync() {
