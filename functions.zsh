@@ -20,7 +20,12 @@ fix() {
     new_version=${version%.*}.$new_num  # Replace the last number in the version string
     echo $new_version
     # https://cli.github.com/
-    gh pr create -t $new_version -f
+    if [ -z "$1" ]; then
+    	gh pr create -t $new_version -f
+    else
+	message=$(echo -e "## Fixed\n$1")
+    	gh pr create -t $new_version -b $message
+    fi
 }
 
 feat() {
@@ -38,7 +43,12 @@ feat() {
     new_version="${version%.*}.0"
     echo $new_version
     # https://cli.github.com/
-    gh pr create -t $new_version -f
+    if [ -z "$1" ]; then
+    	gh pr create -t $new_version -f
+    else
+	message=$(echo -e "## Added\n$1")
+    	gh pr create -t $new_version -b $message
+    fi
 }
 
 function sync() {
