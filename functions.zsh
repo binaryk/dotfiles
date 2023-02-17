@@ -12,6 +12,8 @@ fix() {
     git add .
     git commit -m "fix: $1"
     git push origin HEAD
+    tag=$(git describe --tags --abbrev=0)
+    echo $tag
 }
 
 feat() {
