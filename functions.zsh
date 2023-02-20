@@ -10,7 +10,7 @@ fix() {
     ## I want to automatically PR with a tag number greather than the previous one in the bug fix semver version
     git fetch --all > /dev/null 2>&1 &
 
-    version=$(git describe --tags --abbrev=0 || echo "0.0.1")
+    version=$(git describe --tags `git rev-list --tags --max-count=1` || echo "0.0.1")
     last_num=${version##*.}  # Extract the last number using substring removal
     new_num=$((last_num+1))  # Increase the last number by 1 using arithmetic expansion
     new_version=${version%.*}.$new_num  # Replace the last number in the version string
@@ -36,8 +36,8 @@ fix() {
 
 feat() {
     ## I want to automatically PR with a tag number greather than the previous one in the minor semver version
-    git fetch --all > /dev/null 2>&1 &
-    version=$(git describe --tags --abbrev=0 || echo "0.1.0") 
+    git fetch --all
+    version=$(git describe --tags `git rev-list --tags --max-count=1` || echo "0.1.0")
     middle_num=$(echo $version | cut -d. -f2)  # Extract the middle number using cut
     new_num=$((middle_num+1))  # Increase the middle number by 1 using arithmetic expansion
     new_version=$(echo $version | sed "s/\.[0-9]*\./.$new_num./")  # Replace the middle number in the version string
