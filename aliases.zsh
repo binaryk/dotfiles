@@ -18,7 +18,9 @@ alias library="cd $HOME/Library"
 alias sites="cd $HOME/Sites"
 alias lara="sites && cd laravel/"
 alias work="sites && cd work/"
+alias grow="binar && cd growee"
 alias binar="sites && cd binarcode/"
+alias demo="sites && cd demos/"
 alias school="sites && cd school/"
 alias h="sites && cd homestead/"
 alias revamp="work && cd revamp-givelegacy-dashboard"
@@ -87,7 +89,6 @@ alias gb="git branch"
 alias gc="git checkout"
 alias gl="git log --oneline --decorate --color"
 alias amend="git add . && git commit --amend --no-edit"
-alias commit="git add . && git commit -m"
 alias diff="git diff"
 alias force="git push --force"
 alias nuke="git clean -df && git reset --hard"
@@ -95,7 +96,7 @@ alias pop="git stash pop"
 alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
-alias wip="commit wip"
+alias wip="commit"
 alias pwip="push wip"
 alias gcn="git checkout -b"
 alias gcm="git checkout master && git pull origin master"
@@ -104,9 +105,11 @@ alias gc5x="git checkout 5.x && git pull origin 5.x" # Restify
 alias gc6x="git checkout 6.x && git pull origin 6.x" # Restify
 alias gc7x="git checkout 7.x && git pull origin 7.x" # Restify
 alias gc8x="git checkout 8.x && git pull origin 8.x" # Restify
+alias gc9x="git checkout 9.x && git pull origin 9.x" # Restify
+alias gc10x="git checkout 10.x && git pull origin 10.x" # Restify
 alias gplmm="git pull origin main"
 alias gcmm="git checkout main && git pull origin main"
-alias gcs="git checkout staging && git pull origin staging"
+alias gcs="git checkout stage && git pull origin stage"
 alias gpls="git pull origin staging"
 alias gpld="git pull origin development"
 alias gps="git pull origin staging"
@@ -162,7 +165,7 @@ alias cleardns="sudo killall -HUP mDNSResponder"
 alias mbrew="arch -x86_64 brew"
 
 # Python
-alias pip="pip3"
+#alias pip="pip3"
 
 # Mongo
 alias mongo-start="brew services start mongodb-community"
@@ -175,3 +178,5 @@ alias repo="a restify:repository $1"
 ## MySQL 
 alias mysql.start="cd /Users/eduardlupacescu/Sites/work/mysql-docker && docker-compose up -d"
 alias mysql.stop="cd /Users/eduardlupacescu/Sites/work/mysql-docker && docker-compose down"
+
+alias strategy="cd /Users/eduardlupacescu/Sites/binarcode/ai-strategy"
