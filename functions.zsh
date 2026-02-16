@@ -32,9 +32,10 @@ fix() {
     new_num=$((last_num+1))  # Increase the last number by 1 using arithmetic expansion
     new_version=${version%.*}.$new_num  # Replace the last number in the version string
     echo $new_version
-    if [ "$(git rev-parse --abbrev-ref HEAD)" = "$(git remote show origin | awk '/HEAD branch/ {print $NF}')" ]; then
-    git checkout -b $new_version
-	else
+
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    if [[ "$current_branch" =~ ^(master|main|staging|dev|develop)$ ]]; then
+        git checkout -b $new_version
     fi
 
     git status .
@@ -51,13 +52,25 @@ fix() {
 
     git push origin HEAD
 
-    # https://cli.github.com/
-    if [ -z "$1" ]; then
-    	gh pr create -t $new_version -f
-    else
-	message=$(echo -e "## Fixed\n- $1")
-    	gh pr create -t $1 -b $message
-    fi
+    # Detect base branch
+    base_branch=""
+    for branch in master main staging dev develop; do
+        if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+            base_branch=$branch
+            break
+        fi
+    done
+
+    # Generate PR title and description using Claude based on commits
+    commits=$(git log origin/$base_branch..HEAD --pretty=format:"%s" --reverse)
+    pr_input=$(echo "=== Commits ===" && echo "$commits")
+    pr_data=$(echo "$pr_input" | claude -p "Based on these commits, generate a PR title and description. Format: First line is the title (short, under 70 chars), then a blank line, then the description with bullet points of what was changed. Output ONLY the formatted text, no quotes, no markdown code blocks.")
+
+    # Extract title (first line) and description (rest)
+    pr_title=$(echo "$pr_data" | head -n 1)
+    pr_description=$(echo "$pr_data" | tail -n +3)
+
+    gh pr create -t "$pr_title" -b "$pr_description"
 }
 
 feat() {
@@ -69,9 +82,10 @@ feat() {
     new_version=$(echo $version | sed "s/\.[0-9]*\./.$new_num./")  # Replace the middle number in the version string
     new_version="${new_version%.*}.0"
     echo $new_version
-    if [ "$(git rev-parse --abbrev-ref HEAD)" = "$(git remote show origin | awk '/HEAD branch/ {print $NF}')" ]; then
-    git checkout -b $new_version
-	else
+
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    if [[ "$current_branch" =~ ^(master|main|staging|dev|develop)$ ]]; then
+        git checkout -b $new_version
     fi
 
     git status .
@@ -88,13 +102,25 @@ feat() {
 
     git push origin HEAD
 
-    # https://cli.github.com/
-    if [ -z "$1" ]; then
-    	gh pr create -t $new_version -f
-    else
-	message=$(echo -e "## Added\n$1")
-    	gh pr create -t $new_version -b $message
-    fi
+    # Detect base branch
+    base_branch=""
+    for branch in master main staging dev develop; do
+        if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+            base_branch=$branch
+            break
+        fi
+    done
+
+    # Generate PR title and description using Claude based on commits
+    commits=$(git log origin/$base_branch..HEAD --pretty=format:"%s" --reverse)
+    pr_input=$(echo "=== Commits ===" && echo "$commits")
+    pr_data=$(echo "$pr_input" | claude -p "Based on these commits, generate a PR title and description. Format: First line is the title (short, under 70 chars), then a blank line, then the description with bullet points of what was changed. Output ONLY the formatted text, no quotes, no markdown code blocks.")
+
+    # Extract title (first line) and description (rest)
+    pr_title=$(echo "$pr_data" | head -n 1)
+    pr_description=$(echo "$pr_data" | tail -n +3)
+
+    gh pr create -t "$pr_title" -b "$pr_description"
 }
 
 function sync() {
