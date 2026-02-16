@@ -39,7 +39,16 @@ fix() {
 
     git status .
     git add .
-    git commit -m "fix: $1"
+
+    # If no argument provided, auto-generate commit message
+    if [ -z "$1" ]; then
+        diff_input=$(echo "=== Summary ===" && git diff --cached --stat && echo -e "\n=== Diff (truncated if large) ===" && git diff --cached | head -c 50000)
+        commitMessage=$(echo "$diff_input" | claude -p "Write a single-line commit message for this diff. Output ONLY the message, no quotes, no explanation, no markdown.")
+        git commit -m "fix: $commitMessage"
+    else
+        git commit -m "fix: $1"
+    fi
+
     git push origin HEAD
 
     # https://cli.github.com/
@@ -67,7 +76,16 @@ feat() {
 
     git status .
     git add .
-    git commit -m "feat: $1"
+
+    # If no argument provided, auto-generate commit message
+    if [ -z "$1" ]; then
+        diff_input=$(echo "=== Summary ===" && git diff --cached --stat && echo -e "\n=== Diff (truncated if large) ===" && git diff --cached | head -c 50000)
+        commitMessage=$(echo "$diff_input" | claude -p "Write a single-line commit message for this diff. Output ONLY the message, no quotes, no explanation, no markdown.")
+        git commit -m "feat: $commitMessage"
+    else
+        git commit -m "feat: $1"
+    fi
+
     git push origin HEAD
 
     # https://cli.github.com/
